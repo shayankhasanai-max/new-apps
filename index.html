@@ -123,7 +123,6 @@
 </header>
 
 <div class="container" id="apps"></div>
-
 <script>
 let appsData = [];
 let templateData = [];
@@ -145,34 +144,49 @@ function displayApps(list){
     const card = document.createElement("div");
     card.className = "card";
 
-    card.innerHTML = `
-      <img src="${item.image}">
-      <div class="title">${item.name}</div>
-      <div class="desc">${item.description}</div>
-      <a href="${item.link}">
-        <button class="download-btn">
-          ${currentTab === "apps" ? "Download" : "View"}
-        </button>
-      </a>
-    `;
+    // 🔥 DIFFERENT UI FOR APPS & TEMPLATES
+    if(currentTab === "apps"){
+      card.innerHTML = `
+        <img src="${item.image}">
+        <div class="title">${item.name}</div>
+        <div class="desc">${item.description}</div>
+
+        <a href="${item.link}" target="_blank">
+          <button class="download-btn">Download APK</button>
+        </a>
+      `;
+    } else {
+      card.innerHTML = `
+        <img src="${item.image}">
+        <div class="title">${item.name}</div>
+        <div class="desc">${item.description}</div>
+
+        <a href="${item.preview}" target="_blank">
+          <button class="download-btn">👁️ Preview</button>
+        </a>
+
+        <a href="${item.download}" download>
+          <button class="download-btn">⬇️ Download</button>
+        </a>
+      `;
+    }
 
     container.appendChild(card);
   });
 }
 
-// 🔁 Switch Tabs
+// 🔁 FIXED TAB SWITCH (NO event bug)
 function switchTab(tab){
   currentTab = tab;
 
-  document.querySelectorAll(".tab-btn").forEach(btn =>
-    btn.classList.remove("active")
-  );
-
-  event.target.classList.add("active");
+  const buttons = document.querySelectorAll(".tab-btn");
+  buttons.forEach(btn => btn.classList.remove("active"));
 
   if(tab === "apps"){
+    buttons[0].classList.add("active");
     displayApps(appsData);
   } else {
+    buttons[1].classList.add("active");
     displayApps(templateData);
   }
 }
