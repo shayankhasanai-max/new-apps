@@ -1,0 +1,38 @@
+{
+"apps": [
+{
+"name": "Deen Helper AI",
+"description": "Religious AI assistant",
+"image": "https://wallpapercave.com/wp/wp13210076.jpg",
+"link": "https://drive.google.com/uc?export=download&id=1RoBDq6SQkfXwc1pl6E3dRceMgxF6UGOO"
+},
+{
+"name": "Jarvis AI voice and text bot",
+"description": "A good personal assistant",
+"image": "https://cdn.pixabay.com/photo/2024/03/20/03/06/ai-generated-8644499_1280.jpg",
+"apk": "https://drive.google.com/uc?export=download&id=1G5FmLiC3jQsoQn8r4phDYqoE78vZWCF6"
+},
+{
+"name": "Modern Calculator",
+"description": "A modern calculator app",
+"image": "https://img.freepik.com/free-vector/calculator-floating-cartoon-vector-icon-illustration-finance-business-icon-concept-isolated-flat_138676-9297.jpg?semt=ais_rp_progressive&w=740&q=80",
+"apk": "https://drive.google.com/uc?export=download&id=1G5FmLiC3jQsoQn8r4phDYqoE78vZWCF6"
+}
+],
+
+"templates": [
+{
+"name": "Portfolio Website",
+"description": "Modern portfolio template",
+"image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0lNLL9bp9GE-NhT9PLFTdC5lNsF1s9sC6Qw&s",
+"link": "index.html"
+}
+{
+"name": "startup",
+"description": "startup template",
+"image": "https://static.vecteezy.com/system/resources/previews/022/085/882/non_2x/business-related-and-startup-doodle-set-marketing-money-rocket-diagrams-in-sketch-style-hand-drawn-illustration-isolated-on-white-background-vector.jpg",
+"link": "index.html"
+}
+
+]
+}
